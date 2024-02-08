@@ -32,6 +32,15 @@ public class PlayerRay : MonoBehaviour
             {
                 previousSelected = selectable;
                 selectable.Select();
+
+
+                if (Input.GetMouseButtonDown(0)) // Проверяем нажатие левой кнопки мыши
+                {
+
+                    GameObject objectHit = hit.transform.gameObject;
+                    Destroy(objectHit); // Удаляем объект
+
+                }
             }
         }
         else if (previousSelected)
