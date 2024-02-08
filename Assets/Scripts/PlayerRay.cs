@@ -13,8 +13,8 @@ public class PlayerRay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(player.transform.position, transform.forward);
-        Debug.DrawRay(player.transform.position, transform.forward * 100, Color.red);
+        Ray ray = new Ray(player.transform.position+new Vector3(0,1.5f,0), transform.forward);
+        Debug.DrawRay(player.transform.position + new Vector3(0, 1.5f, 0), transform.forward * 100, Color.red);
         
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))

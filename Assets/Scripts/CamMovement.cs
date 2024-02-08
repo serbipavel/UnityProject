@@ -20,9 +20,9 @@ public class CamMovement : MonoBehaviour
         xMouse = Input.GetAxis("Mouse X");
         yMouse = Input.GetAxis("Mouse Y");
 
-        transform.position = player.transform.position - transform.forward*3;
+        transform.position = player.transform.position + new Vector3(0, 1.5f, 0) - transform.forward*3; 
 
         player.transform.eulerAngles += new Vector3(0, xMouse, 0f);
-        transform.eulerAngles += new Vector3(-yMouse, xMouse, 0f);
+        transform.eulerAngles += new Vector3(-yMouse, 0f, 0f);
     }
 }
