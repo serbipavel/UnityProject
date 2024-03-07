@@ -8,7 +8,7 @@ public class PlayerRay : MonoBehaviour
 
     public Transform pointer;
     public Transform player;
-    public Selectable previousSelected;
+    public MySelectable previousSelected;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +21,7 @@ public class PlayerRay : MonoBehaviour
         {
             pointer.position = hit.point;
             /* hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.yellow;*/
-            Selectable selectable = hit.collider.gameObject.GetComponent<Selectable>();
+            MySelectable selectable = hit.collider.gameObject.GetComponent<MySelectable>();
             if (previousSelected && previousSelected != selectable)
 
             {
